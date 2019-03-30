@@ -7,18 +7,15 @@ using System.Threading.Tasks;
 namespace c0730406
 {
     class Program
-    {
-
-
-        {
-
+    { 
+       
             static void Main(string[] args)
 
             {
 
                 HelloWorld hw = new HelloWorld();
             Console.WriteLine("Hello World");
-                hw.Hello();
+            Console.ReadLine();
 
             }
 
