@@ -7,41 +7,41 @@ using System.Threading.Tasks;
 namespace c0730406
 {
     class Program
-    { 
-       
-            static void Main(string[] args)
+    {
 
-            {
-
-                HelloWorld hw = new HelloWorld();
-            Console.WriteLine("Hello World");
-            Console.ReadLine();
-
-            }
-
-        }
-
-        class HelloWorld
-
+        static void Main(string[] args)
         {
-
-            public void Hello()
-
             {
 
-                Console.WriteLine("Hello World");
-
+                Console.WriteLine("Downloading file");
+                Download();
+                Console.ReadLine();
             }
 
-
-
-            public int Add(int a, int b) { return a + b; }
-
-
-
-
-
         }
+        static async void Download()
+        {
+            await Network.Download();
+            Console.WriteLine("Download complete");
+        }
+        class Network
+        {
+            static ArrayList WebPageContents = new ArrayList();
+            private static object i;
 
+            public static async Task Download()
+            {
+                HttpClient client = new HttpClient();
+                String data = await client.GetStringAsync("http://torontopubliclibrary.ca");
+                //  Console.WriteLine(data);
+                foreach (var i in data) ;
+                {
+                    WebPageContents.Add(i);
+                }
+            }
+        }
     }
+
+
+   
 
