@@ -17,7 +17,7 @@ namespace c0730406
             {
 
                 HelloWorld hw = new HelloWorld();
-
+            Console.WriteLine("Hello World");
                 hw.Hello();
 
             }
