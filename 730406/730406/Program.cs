@@ -8,9 +8,38 @@ namespace _730406
 {
     class Program
     {
-        static void Main(string[] args)
+        class Program
+
         {
-            int i = 7;
+
+            static void Main(string[] args)
+
+            {
+
+                HelloWorld hw = new HelloWorld();
+
+                hw.Hello();
+
+            }
+
         }
+
+        class HelloWorld
+
+        {
+
+            public void Hello()
+
+            {
+
+                Console.WriteLine("Hello World");
+
+            }
+
+
+
+            public int Add(int a, int b) { return a + b; }
+
+        }
+
     }
-}
